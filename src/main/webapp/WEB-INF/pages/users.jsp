@@ -74,54 +74,44 @@
             <tr>
                 <td>
                     <form:label path="id">
-                        <spring:message text="ID"
+                        <spring:message text="ID"/>
                     </form:label>
                 </td>
                 <td>
                     <form:input path="id" readonly="true" size="8" disabled="true"/>
-                    <form:hidden path="id"
+                    <form:hidden path="id"/>
                 </td>
             </tr>
         </c:if>
         <tr>
             <td>
-                <form:label path="bookTitle">
-                    <spring:message text="Title"/>
+                <form:label path="login">
+                    <spring:message text="Login"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="bookTitle"/>
+                <form:input path="login"/>
             </td>
         </tr>
         <tr>
             <td>
-                <form:label path="bookAuthor">
-                    <spring:message text="Author"/>
+                <form:label path="pass">
+                    <spring:message text="Pass"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="bookAuthor"/>
+                <form:input path="pass"/>
             </td>
         </tr>
-        <tr>
-            <td>
-                <form:label path="price">
-                    <spring:message text="Price"/>
-                </form:label>
-            </td>
-            <td>
-                <form:input path="price"/>
-            </td>
-        </tr>
-        <tr>
+               <tr>
             <td colspan="2">
-                <c:if test="${!empty book.bookTitle}">
+                <c:if test="${!empty user.login}">
                     <input type="submit"
-                           value="<spring:message text="Edit Book"/>"/>
+                           value="<spring:message text="Edit User"/>"/>
                 </c:if>
-                <c:if test="${empty book.bookTitle}">
+                <c:if test="${empty user.login}">
                     <input type="submit"
-                           value="<spring:message text="Add Book"/>"/>
+                           value="<spring:message text="Add User"/>"/>
                 </c:if>
             </td>
         </tr>
