@@ -38,6 +38,7 @@
     <bean id="userService" class="ru.example5.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
+    <context:component-scan base-package="ru.example5"/>
     <tx:annotation-driven transaction-manager="transactionManager"/>
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
